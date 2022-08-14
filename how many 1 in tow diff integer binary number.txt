@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int bits1(int a,int b){
+  int ans1=0;
+
+  int ans2=0;
+  
+    while(a>0||b>0){
+        if (a&1==1){  // using bitwise and operator
+            ans1=ans1+1;
+             }
+             a=a>>1;   //using right shift operator
+      if(b&1==1){
+          
+          ans2=ans2+1;
+      }
+      b=b>>1;
+    }
+    return ans1+ans2;
+   
+    
+    
+    
+}
+
+int main() {
+    int n1,n2;
+    cin>>n1>>n2;
+    
+    cout<<"no. of bits "<<bits1(n1,n2)<<endl;
+   
+
+    return 0;
+}
